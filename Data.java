@@ -7,4 +7,5 @@ public class Data {
         int sintomaticity = 70;
         int letality = 50;
         int incubation = 6;
+        int historyMeetings = 3;
 }
