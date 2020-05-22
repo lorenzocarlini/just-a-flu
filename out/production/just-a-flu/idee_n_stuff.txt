@@ -1,0 +1,19 @@
+strategie
+	-non puoi effettuare nessuna strategia prima che ci sia almeno un rosso
+	-si può abilitare il tracciamento delle persone a fronte  di un costo C
+		normalmente puoi rintracciare solo gli incontri del giorno precedente
+		
+		abbiamo un tot di tempo da quando si decide di sviluppare l'app a quando entra in 				commercio
+
+	-si può decidere la percentuale di persone da fermare ogni giorno
+	-decidere se investire parecchi C nel vaccino, 6 mesi per essere fatto
+
+
+
+
+
+idee
+	(easter egg corea del nord, ogni persona rossa uccisa, kim è immortale)
+	dividere in regioni il paese
+	importare tamponi costo minore dall'estero, ma non affidabili al 100%
+	decidere se curare anziani o giovani o entrambi

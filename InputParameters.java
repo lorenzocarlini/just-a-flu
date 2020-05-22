@@ -1,4 +1,4 @@
-public class Data {
+public class InputParameters {
         int population = 10;
         int resources = 100;   //se <= 0, endgame
         int testCost = 1;
@@ -6,6 +6,6 @@ public class Data {
         int infectivity = 30; //da 1 a 100
         int sintomaticity = 70;
         int letality = 50;
-        int incubation = 6;
+        int duration = 6;
         int historyMeetings = 3;
 }
