@@ -16,10 +16,54 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/testing" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="" />
+    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Lorenzo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Lorenzo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/just-a-flu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputParameters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idee_n_stuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/idee_n_stuff.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/just-a-flu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/dictionaries/Lorenzo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/dictionaries/Lorenzo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/just-a-flu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/META-INF/just-a-flu.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/idee_n_stuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/idee_n_stuff.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/just-a-flu.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +77,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/testing" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cGsZUECJcS50ahFpo3xBd8zPsx" />
@@ -44,6 +114,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
@@ -73,11 +144,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/testing" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1165" y="563" key="#Notifications" timestamp="1590169760651">
@@ -100,86 +184,131 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590166716435" />
-    <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1590173715219">
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590535755153">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590173715219" />
-    <state width="2517" height="492" key="GridCell.Tab.0.center" timestamp="1590173715219">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1590535755153" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.bottom" timestamp="1590577678054">
+      <screen x="0" y="0" width="2560" height="1404" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590173715219" />
-    <state width="2517" height="492" key="GridCell.Tab.0.left" timestamp="1590173715219">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678054" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.center" timestamp="1590577678051">
+      <screen x="0" y="0" width="2560" height="1404" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590173715219" />
-    <state width="2517" height="492" key="GridCell.Tab.0.right" timestamp="1590173715219">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678051" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.left" timestamp="1590577678051">
+      <screen x="0" y="0" width="2560" height="1404" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590173715219" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678051" />
+    <state width="2518" height="486" key="GridCell.Tab.-1.right" timestamp="1590577678053">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2518" height="486" key="GridCell.Tab.-1.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678053" />
+    <state width="2518" height="406" key="GridCell.Tab.0.bottom" timestamp="1590578813142">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2518" height="406" key="GridCell.Tab.0.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813142" />
+    <state width="2518" height="406" key="GridCell.Tab.0.center" timestamp="1590578813139">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2518" height="406" key="GridCell.Tab.0.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813139" />
+    <state width="2518" height="406" key="GridCell.Tab.0.left" timestamp="1590578813133">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2518" height="406" key="GridCell.Tab.0.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813133" />
+    <state width="2518" height="406" key="GridCell.Tab.0.right" timestamp="1590578813140">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2518" height="406" key="GridCell.Tab.0.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813140" />
+    <state width="2518" height="486" key="GridCell.Tab.1.bottom" timestamp="1590577660415">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2518" height="486" key="GridCell.Tab.1.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590577660415" />
+    <state width="2518" height="486" key="GridCell.Tab.1.center" timestamp="1590577660411">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2518" height="486" key="GridCell.Tab.1.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590577660411" />
+    <state width="2518" height="486" key="GridCell.Tab.1.left" timestamp="1590577660409">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2518" height="486" key="GridCell.Tab.1.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590577660409" />
+    <state width="2518" height="486" key="GridCell.Tab.1.right" timestamp="1590577660413">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state width="2518" height="486" key="GridCell.Tab.1.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590577660413" />
     <state x="781" y="345" key="SettingsEditor" timestamp="1590166556344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1590166556344" />
+    <state x="849" y="430" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590577723068">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state x="849" y="429" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1400@0.0.2560.1400" timestamp="1590535860712" />
+    <state x="849" y="430" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1404@0.0.2560.1404" timestamp="1590577723068" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
+          <line>54</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="5" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="7" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="8" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="9" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="10" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="11" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="12" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="13" />
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((World)this).population" custom="World" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

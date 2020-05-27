@@ -1,12 +1,12 @@
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashMap;
 
 public class World {
-    ArrayList<Person> population = new ArrayList<Person>();
+    HashMap<Integer,Person> population = new HashMap<Integer,Person>();
     int availableCredits;
     int testCost;
-    static int dailyMeetings;
-    static int historyMeetings; //In days
+    static int dailyMeetings = 5;
+    static int historyMeetings = 5; //In days
     int day = 0;
     int incubation;
     int duration;
@@ -17,7 +17,7 @@ public class World {
 
         public World(InputData inputParameters) {
             for(int i = 0; i<inputParameters.population; i++){
-                population.add(new Person(this));
+                population.put(i,new Person(i,this));
             }
             this.availableCredits = inputParameters.availableCredits;
             this.testCost = inputParameters.testCost;
@@ -28,8 +28,9 @@ public class World {
             this.letality = inputParameters.letality;
         }
         public void nextDay(){
-            for(Person individual : population){
+            for(Person individual : population.values()){
                 individual.nextDay();
+                day++;
             }
         }
 

@@ -16,16 +16,69 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/testing" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="" />
+    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputParameters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputParameters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/World.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/testing" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cGsZUECJcS50ahFpo3xBd8zPsx" />
@@ -37,7 +90,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Java" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="just-a-flu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,16 +120,132 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/testing" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1165" y="563" key="#Notifications" timestamp="1590169760651">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1165" y="563" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1590169760651" />
+    <state x="989" y="319" key="#Unnamed" timestamp="1590169855931">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="989" y="319" key="#Unnamed/0.0.2560.1400@0.0.2560.1400" timestamp="1590169855931" />
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590169838379">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590169838379" />
+    <state x="1009" y="489" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590169852427">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1009" y="489" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590169852427" />
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590166716435">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1590166716435" />
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590535755153">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1027" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1590535755153" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1590536503292">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center" timestamp="1590536503292">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left" timestamp="1590536503292">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right" timestamp="1590536503292">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
     <state x="781" y="345" key="SettingsEditor" timestamp="1590166556344">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1590166556344" />
+    <state x="849" y="429" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590535860712">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="849" y="429" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1400@0.0.2560.1400" timestamp="1590535860712" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>74</line>
+          <properties class="Person" method="test">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
