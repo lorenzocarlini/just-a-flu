@@ -30,8 +30,8 @@ public class World {
         public void nextDay(){
             for(Person individual : population.values()){
                 individual.nextDay();
-                day++;
             }
+            day++;
         }
 
 

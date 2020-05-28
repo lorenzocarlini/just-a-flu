@@ -19,50 +19,21 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/testing" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:testing" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Lorenzo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Lorenzo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/just-a-flu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="Infection system almost complete, fatalities/incubation/symptoms working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/InputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputParameters.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/idee_n_stuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/idee_n_stuff.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/just-a-flu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/dictionaries/Lorenzo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/dictionaries/Lorenzo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/just-a-flu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/InputData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/InputParameters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/META-INF/just-a-flu.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/idee_n_stuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/idee_n_stuff.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/just-a-flu/just-a-flu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/just-a-flu/just-a-flu.iml" afterDir="false" />
+    </list>
+    <list id="8f3388d6-9e15-45b8-a0f4-96d5c47855c8" name="Infection system almost complete, fatalities/incubation/symptoms working" comment="duplicate">
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,9 +84,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Java" type="Application" factoryName="Application">
@@ -132,11 +104,27 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="27a4669c-c61e-4c4c-b54b-2bfd4daa6c50" name="Default Changelist" comment="" />
+      <changelist id="8f3388d6-9e15-45b8-a0f4-96d5c47855c8" name="Infection system almost complete, fatalities/incubation/symptoms working" comment="duplicate" />
       <created>1590166319623</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590166319623</updated>
     </task>
+    <task id="LOCAL-00001" summary="Infection system almost complete, fatalities/incubation/symptoms working">
+      <created>1590579060537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590579060537</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Infection system almost complete, fatalities/incubation/symptoms working">
+      <created>1590579194947</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590579194947</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,7 +138,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/testing" />
+                        <option value="testing" />
                       </list>
                     </value>
                   </entry>
@@ -162,6 +150,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Infection system almost complete, fatalities/incubation/symptoms working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Infection system almost complete, fatalities/incubation/symptoms working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1165" y="563" key="#Notifications" timestamp="1590169760651">
@@ -204,26 +196,26 @@
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2518" height="486" key="GridCell.Tab.-1.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678053" />
-    <state width="2518" height="406" key="GridCell.Tab.0.bottom" timestamp="1590578813142">
+    <state width="2518" height="404" key="GridCell.Tab.0.bottom" timestamp="1590693338089">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
-    <state width="2518" height="406" key="GridCell.Tab.0.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813142" />
-    <state width="2518" height="406" key="GridCell.Tab.0.center" timestamp="1590578813139">
+    <state width="2518" height="404" key="GridCell.Tab.0.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
+    <state width="2518" height="404" key="GridCell.Tab.0.center" timestamp="1590693338089">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
-    <state width="2518" height="406" key="GridCell.Tab.0.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813139" />
-    <state width="2518" height="406" key="GridCell.Tab.0.left" timestamp="1590578813133">
+    <state width="2518" height="404" key="GridCell.Tab.0.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
+    <state width="2518" height="404" key="GridCell.Tab.0.left" timestamp="1590693338088">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
-    <state width="2518" height="406" key="GridCell.Tab.0.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813133" />
-    <state width="2518" height="406" key="GridCell.Tab.0.right" timestamp="1590578813140">
+    <state width="2518" height="404" key="GridCell.Tab.0.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338088" />
+    <state width="2518" height="404" key="GridCell.Tab.0.right" timestamp="1590693338089">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
-    <state width="2518" height="406" key="GridCell.Tab.0.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590578813140" />
+    <state width="2518" height="404" key="GridCell.Tab.0.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
     <state width="2518" height="486" key="GridCell.Tab.1.bottom" timestamp="1590577660415">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
@@ -240,10 +232,19 @@
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2518" height="486" key="GridCell.Tab.1.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590577660413" />
-    <state x="781" y="345" key="SettingsEditor" timestamp="1590166556344">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="781" y="346" key="SettingsEditor" timestamp="1590687500141">
+      <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1590166556344" />
+    <state x="781" y="346" key="SettingsEditor/0.0.2560.1404@0.0.2560.1404" timestamp="1590687500141" />
+    <state x="1137" y="621" key="VCS.ChangelistChooser" timestamp="1590579263401">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state x="1137" y="621" key="VCS.ChangelistChooser/0.0.2560.1404@0.0.2560.1404" timestamp="1590579263401" />
+    <state x="880" y="438" key="Vcs.Push.Dialog.v2" timestamp="1590579358135">
+      <screen x="0" y="0" width="2560" height="1404" />
+    </state>
+    <state x="880" y="438" key="Vcs.Push.Dialog.v2/0.0.2560.1404@0.0.2560.1404" timestamp="1590579358135" />
     <state x="849" y="430" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590577723068">
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
@@ -255,58 +256,28 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
           <line>4</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>76</line>
+          <line>79</line>
           <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Person.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
