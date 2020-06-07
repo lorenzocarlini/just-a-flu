@@ -3,10 +3,9 @@ public class Main {
         InputData pp = new InputData();
         World Terra = new World(pp);
         Terra.population.get(0).infect();
-        //Terra.population.get(0).meet(101);
-        Terra.population.get(0).meet(4);
-        for(int i = 0;i < 50; i++){
-            Terra.population.get(0).meet(4);
+        Terra.population.get(0).meet(101);
+        Terra.population.get(4).meet(0);
+        for(int i = 0;i < 100; i++){
             Terra.nextDay();
             System.out.println("[0:Status] " + Terra.population.get(0).infectionStatus);
             System.out.println("[0:End] " + Terra.population.get(0).infectionEnd);

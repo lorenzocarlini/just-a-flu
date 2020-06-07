@@ -1,98 +1,110 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-//Classe per la gestione di ogni singola persona all'interno della simulazione
-public class Person{
-    ArrayList<Integer> recentContacts = new ArrayList<Integer>(); //Lista degli id con cui la persona ha avuto contatti recenti
-    private Random chance = new Random(); //Seed per generazione di numeri
-    private World myParent; //Identitá dell'oggetto World genitore
-    int day = 0; //Giorno in cui si trova la persona (Per gestione degli stage dell'infezione
-    public int myId;
+public class Person {
+    public int myId; //Identificativo univoco
+    public int myDay = 0; //Giorno in cui si trova la persona (usato per i calcoli per il progresso dell'infezione)
+    public boolean isQuarantined = false; //É in quarantena?
+    public boolean isSymptomatic = false; //É sintomatico?
+    private ArrayList<Integer> recentContacts = new ArrayList<Integer>(); //Lista degli id con cui la persona ha avuto contatti recenti
+    private Random randomSeed = new Random(); //Seed di randomizzazione
+    private World myWorld; //Oggetto World genitore
+    public int infectionStatus = 2; //0=Nero (Morto), 1=Blu (Immune), 2=Verde (Sano), 3=Giallo (Infetto asintomatico), 4=Rosso (Infetto sintomatico)
+    public int dateInfectionStart = -1;
+    public int dateSymptomsStart = -1; //Data in cui inizieranno i sintomi (se inizieranno)
+    public int dateInfectionEnd = -1;
+    public boolean isDeadly = false;
+    public int dailyMeetings;
 
-    int infectionStatus = 0;  //0=G, 1=Y, 2=R, 3=B, 4=N (Magari rimuovere del tutto?)
-    private int incubationStart = -1; //Giorno di inizio dell'incubazione, se -1 non é stato ancora esposto
-    private int symptomsStart = -1; //Giorno in cui inizieranno i sintomi (mai se -1)
-    private int relativeSymptomsStart = -1; //Variabile di debug, dopo quanti giorni RELATIVI all' inizio infezione si mostreranno i primi sintomi
-    int infectionEnd = -1; //Data della fine della sua malattia
-    private boolean willDie = false; //Morirá alla fine della sua infezione?
-    boolean isQuarantined = false;  //Se quarantenato puó incontrare / essere incontrato
-    boolean isIncubating = false; //Se attualmente in fase di incubazione / progressione del virus
-    boolean isSymptomatic = false; //Se sintomatico
-
-
-
-    public Person(int id,World parent){
-         myParent = parent;
-         myId = id;
+    public Person(int id, World parent){
+        myWorld = parent;
+        myId = id;
+        calculateMeetings();
     }
 
+    void nextDay(){
+        myDay++;
+        calculateMeetings();
+        if(infectionStatus == 2 && myDay == dateInfectionStart){
+            infectionStatus = 3;
+        }
 
-    void nextDay() {
-        day++;
-        if(isIncubating) {
-            if (day == incubationStart + myParent.incubation) {
-                infectionStatus = 1;
-                futureSymptoms();
-                infectionOutcome();
+        if(infectionStatus >= 3){
+            if(myDay == dateSymptomsStart){
+                infectionStatus = 4;
             }
-            if (infectionStatus == 1 && day == symptomsStart) {
-                infectionStatus = 2;
-                isSymptomatic = true;
-            }
-            if (day == infectionEnd) {
-                if (willDie && infectionStatus == 2) {
-                    infectionStatus = 4;
-                    //Richiesta obitorio
-                } else {
-                    infectionStatus = 3;
+            else if(myDay >= dateInfectionEnd){
+                if(isDeadly && infectionStatus == 4){
+                    infectionStatus = 0;
                 }
-                isIncubating = false;
+                else{
+                    infectionStatus = 1;
+                }
+            }
+
+        }
+    }
+    public boolean willInfect(){
+        if(randomSeed.nextInt(99) < myWorld.infectivity-1 & infectionStatus >= 3){
+            return true;
+        }
+        else{return false;}
+    }
+    void infect(){
+        if(infectionStatus == 2){
+            dateInfectionStart = myDay + myWorld.duration/6;
+            infectionPlanner();
+        }
+    }
+    private void infectionPlanner(){
+        //dateIncubationStart = localDay;
+        if (randomSeed.nextInt(99) <= myWorld.sintomaticity) {
+            dateSymptomsStart = myDay + randomSeed.nextInt((myWorld.duration - 1) / 3);
+            if (randomSeed.nextInt(99) < myWorld.letality-1) {
+                isDeadly = true;
             }
         }
 
 
-    } //Funzione che gestite il progresso dell'infezione
-    void infect(){
-        if (!isIncubating && infectionStatus == 0){ //Se il soggetto non é né guarito né morto
-            incubationStart = day; //Avvia il processo di incubazione
-            isIncubating = true;
+        if(isDeadly){
+            dateInfectionEnd = dateSymptomsStart + randomSeed.nextInt(myWorld.duration - (dateSymptomsStart - myDay));
         }
-
-    } //Avvio del processo di infezione
+        else {
+            dateInfectionEnd = myDay + myWorld.duration;
+        }
+    }
     void meet(int id){
-        if (myParent.population.containsKey(id)){
-            if (recentContacts.size() == myParent.dailyMeetings * myParent.historyMeetings && recentContacts.size()>0 ){
+        if (myWorld.population.containsKey(id)){
+            if (recentContacts.size() == myWorld.dailyMeetings * myWorld.historyMeetings && recentContacts.size()>0 ){
                 recentContacts.remove(0);
             }
-            if(!recentContacts.contains(id)){ recentContacts.add(id);}
-            if(chance.nextInt(99) <= myParent.infectivity-1 && infectionStatus > 0 && infectionStatus < 3){
-                myParent.population.get(id).infect();
-
+            if(!recentContacts.contains(id)) {
+                recentContacts.add(id);
             }
-        }
+            if(willInfect()){
+                myWorld.population.get(id).infect();
+            }
+            if(myWorld.population.get(id).willInfect()){
+                infect();
+            }
+            myWorld.population.get(id).recentContacts.add(myId);
+            }
         else{System.out.println("No person with ID:"+id);}
-        myParent.population.get(id).recentContacts.add(myId);
 
-
-    } //Funzione che gestisce il processo di incontro, logging e possibile contagio
-    boolean test(){
-
-        return infectionStatus == 1 || infectionStatus == 2;
     }
-
-    private void futureSymptoms(){
-        if(chance.nextInt(99) <= myParent.sintomaticity-1){
-            relativeSymptomsStart = chance.nextInt((myParent.duration-1)/3);
-            symptomsStart = day + relativeSymptomsStart;
+    public boolean test(){
+        if (infectionStatus > 2){
+            return true;
         }
-
-    } //Determinazione della sintomaticitá o meno (ed in caso positivo dell'inizio dei sintomi) dell'individuo
-    private void infectionOutcome(){
-        if(symptomsStart != -1 && chance.nextInt(99) <= myParent.letality-1){
-            infectionEnd = symptomsStart + chance.nextInt(myParent.duration - relativeSymptomsStart);
-            willDie = true;
+        else{
+            return false;
         }
-        else{infectionEnd = day + myParent.duration;}
-    } //Determina la fine dell' infezione (normale decorso normalmente, qualsiasi giorno tra l' apparizione dei sintomi e fine del decorso normale in caso di morte)
+    }
+    private void calculateMeetings(){
+        dailyMeetings = myWorld.dailyMeetings + (randomSeed.nextInt(myWorld.dailyMeetingsOffset + 1) -1);
+
+
+    }
 }
+
 

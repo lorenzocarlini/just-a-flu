@@ -7,4 +7,6 @@ public class InputData {
         int infectivity = 10; //da 1 a 100
         int sintomaticity = 100;
         int letality = 100;
+        int dailyMeetings = 5;
+        int historyMeetings = 5; //In days
 }

@@ -5,8 +5,9 @@ public class World {
     HashMap<Integer,Person> population = new HashMap<Integer,Person>();
     int availableCredits;
     int testCost;
-    static int dailyMeetings = 5;
-    static int historyMeetings = 5; //In days
+    int dailyMeetings;
+    int dailyMeetingsOffset;
+    int historyMeetings; //In days
     int day = 0;
     int incubation;
     int duration;
@@ -26,6 +27,9 @@ public class World {
             this.infectivity = inputParameters.infectivity;
             this.sintomaticity = inputParameters.sintomaticity;
             this.letality = inputParameters.letality;
+            this.dailyMeetings = inputParameters.dailyMeetings;
+            this.historyMeetings = inputParameters.historyMeetings;
+            this.dailyMeetingsOffset = getMeetingsOffset();
         }
         public void nextDay(){
             for(Person individual : population.values()){
@@ -33,6 +37,12 @@ public class World {
             }
             day++;
         }
+        public int getMeetingsOffset(){
+            float temp = dailyMeetings;
+            temp = (temp/100)*20;
+            return (int)temp;
+        }
+
 
 
 
