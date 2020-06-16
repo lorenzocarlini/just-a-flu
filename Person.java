@@ -30,7 +30,7 @@ public class Person {
         }
 
         if(infectionStatus >= 3){
-            if(myDay == dateSymptomsStart){
+            if(myDay >= dateSymptomsStart && infectionStatus != 4){
                 infectionStatus = 4;
             }
             else if(myDay >= dateInfectionEnd){
@@ -52,6 +52,7 @@ public class Person {
     }
     void infect(){
         if(infectionStatus == 2){
+            infectionStatus = 3;
             dateInfectionStart = myDay + myWorld.duration/6;
             infectionPlanner();
         }
