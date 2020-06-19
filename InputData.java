@@ -4,7 +4,7 @@ public class InputData {
         int testCost = 1;
         int population = 5;
         int duration = 30;
-        int infectivity = 100; //da 1 a 100
+        int infectivity = 50; //da 1 a 100
         int sintomaticity = 100;
         int letality = 100;
         int dailyMeetings = 5;

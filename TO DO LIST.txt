@@ -1,0 +1,31 @@
+TO DO LIST
+
+-Gestire i meet (a seconda dei dati, ogni persona fa in media tot incontri, solo con le persone della sua regione,
+    ATTENZIONE controllare a livello matematico incontri (esempio strette di mano Orsina), perchè se io faccio 4 incontri,
+    ogni persona che ho incontrato ha avuto un incontro)   DONE
+
+-gestire i parametri di World a seconda degli eventi che acccadono (oltre a eventi delle scelte, ma anche il:
+    -aggiornare r0   DONE
+
+-thread tra incontri e pianificazione incontri 
+
+-gestire pause simulazione nel main  ALMOST DONE
+
+-se sei rosso, non ti muovi, ma altri vengono verso di te
+
+
+-creare e gestire regioni, ogni persona può incontrarsi solo con quelli della sua regione, probabilità di un individuo di cambiare
+    regione(modificabile tramite strategie,solo per motivi di lavoro ecc. ma applicabile solo dopo un tot di rossi),
+    lockdown regioni, strategie applicabili a regioni singole
+    
+-si inizia con un cittadino random giallo
+
+-scelta strategie a partire dal primo sintomatico (per strategie, vedere idee_n_stuff)
+
+-interfaccia grafica per dati input, aggiornamento utente tramite grafici e dati, box con strategie da intraprendere
+
+
+
+COSE FATTE
+-gestite risorse a seconda di ciò che accade giornalmente
+
