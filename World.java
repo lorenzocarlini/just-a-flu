@@ -59,18 +59,7 @@ public class World {
                     deaths.add(individual.myId);
                     continue;
                 }
-                currentStrategies.quarantine(individual);
-
-                    if(individual.infectionStatus==3){
-                        System.out.println(individual.myId+" is sick, yellow");
-                    }
-                    if(individual.infectionStatus==4){
-                        System.out.println(individual.myId+" is sick, red");
-                        System.out.println("Strategia per oggi?");
-                        String userInput = myObj.nextLine();  // Read user input, GESTISCI TE FRA!
-                        currentStrategies.quarantineStrategy = Integer.parseInt(userInput);
-                    }
-
+                currentStrategies.applyStrategies(individual);
                 individual.nextDay();
                 
             }
@@ -110,11 +99,17 @@ public class World {
                 if(individual.infectionStatus==4)
                     continue;
                 for(int i=0; i<individual.dailyMeetings;i++){
+                    if(peopleCanMeetId.size()<=0){
+                        vd=vd/population.size();
+                        System.out.println("stinky");
+                        //nemmeno un incontro era libero
+                        return;
+                    }
                     int currentId=peopleCanMeetId.get(randomSeed.nextInt(peopleCanMeetId.size()));
-                    while(individual.meet(currentId)==false){
+                    while(individual.meet(currentId)==false || (peopleCanMeetId.size()==1 && peopleCanMeetId.get(0)!=individual.myId)){
                         if(currentId!=individual.myId){
                             peopleCanMeetId.remove(peopleCanMeetId.indexOf(currentId));                     
-                            if(peopleCanMeetId.size()==0 
+                            if(peopleCanMeetId.size()==0
                              || (peopleCanMeetId.size()==1 && peopleCanMeetId.get(0)==individual.myId)){
                                 vd=vd/population.size();
                                 //nemmeno un incontro era libero

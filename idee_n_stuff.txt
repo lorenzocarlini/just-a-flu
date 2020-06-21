@@ -20,3 +20,10 @@ idee
 	importare tamponi costo minore dall'estero, ma non affidabili al 100%
 	decidere se curare anziani o giovani o entrambi
 
+
+	mattina vengono dati i dati del giorno prima
+	si applicano le strategie
+	
+	avanzamento malattie
+	incontri tra persone
+

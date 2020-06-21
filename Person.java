@@ -32,6 +32,7 @@ public class Person {
             //se sta fermo, toglie crediti
             myWorld.removeCredit();
         }
+
         //se è rosso, costi da sostenere
         if(infectionStatus==4){
             myWorld.medicalCare();

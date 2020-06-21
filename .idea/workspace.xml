@@ -30,11 +30,11 @@
       <change beforePath="$PROJECT_DIR$/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/InputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Strategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/idee_n_stuff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/idee_n_stuff.txt" afterDir="false" />
     </list>
-    <list id="8f3388d6-9e15-45b8-a0f4-96d5c47855c8" name="Infection system almost complete, fatalities/incubation/symptoms working" comment="duplicate">
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-    </list>
+    <list id="8f3388d6-9e15-45b8-a0f4-96d5c47855c8" name="Infection system almost complete, fatalities/incubation/symptoms working" comment="duplicate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +88,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Java" type="Application" factoryName="Application">
@@ -196,25 +201,25 @@
       <screen x="0" y="0" width="2560" height="1404" />
     </state>
     <state width="2518" height="486" key="GridCell.Tab.-1.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590577678053" />
-    <state width="2518" height="404" key="GridCell.Tab.0.bottom" timestamp="1590693338089">
-      <screen x="0" y="0" width="2560" height="1404" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1592753612735">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1592753612735" />
     <state width="2518" height="404" key="GridCell.Tab.0.bottom/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
-    <state width="2518" height="404" key="GridCell.Tab.0.center" timestamp="1590693338089">
-      <screen x="0" y="0" width="2560" height="1404" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center" timestamp="1592753612735">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1592753612735" />
     <state width="2518" height="404" key="GridCell.Tab.0.center/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
-    <state width="2518" height="404" key="GridCell.Tab.0.left" timestamp="1590693338088">
-      <screen x="0" y="0" width="2560" height="1404" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left" timestamp="1592753612734">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1592753612734" />
     <state width="2518" height="404" key="GridCell.Tab.0.left/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338088" />
-    <state width="2518" height="404" key="GridCell.Tab.0.right" timestamp="1590693338089">
-      <screen x="0" y="0" width="2560" height="1404" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right" timestamp="1592753612735">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1590536503292" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1592753612735" />
     <state width="2518" height="404" key="GridCell.Tab.0.right/0.0.2560.1404@0.0.2560.1404" timestamp="1590693338089" />
     <state width="2518" height="486" key="GridCell.Tab.1.bottom" timestamp="1590577660415">
       <screen x="0" y="0" width="2560" height="1404" />
@@ -259,25 +264,10 @@
           <line>4</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Person.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="100" />
+          <url>file://$PROJECT_DIR$/World.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

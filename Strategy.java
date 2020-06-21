@@ -21,12 +21,12 @@ public class Strategy {
     }
 
     public void applyStrategies(Person currentPerson){
-        //
+
         vaccine();
         historyMeetingsResearch();
-
+        //implementare con i threads!
         quarantine(currentPerson);
-        tracement(currentPerson);
+        //tracement(currentPerson);
         swab(currentPerson);
     }
 
