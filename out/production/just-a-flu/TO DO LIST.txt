@@ -29,5 +29,3 @@ TO DO LIST
 COSE FATTE
 -gestite risorse a seconda di ciò che accade giornalmente
 
--Gestire monitor thread principale e interfaccia
-

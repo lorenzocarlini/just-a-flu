@@ -5,11 +5,12 @@ public class Main extends Thread{
     public static Object monitor;
     public static long timeForDay = 20;
     public static void main(String[] args) throws InterruptedException {
-        InputData pp = new InputData();
-        World Terra = new World(pp);
-        Terra.population.get(1).infect();
-        threadSetup(new Object());
-        MainThread t1 = new MainThread(Terra);
+        new MyFrame1();
+        //InputData pp = new InputData();
+        //World Terra = new World(pp);
+        //Terra.population.get(1).infect();
+        //threadSetup(new Object());
+        //MainThread t1 = new MainThread(Terra);
         System.out.println("Done");
     }
     public static void threadSetup(Object newMonitor){

@@ -2,11 +2,11 @@ import java.util.ArrayList;
 
 public class Strategy {
     public World myWorld;
-    public int quarantineStrategy=0;  //0 = nessuno; 1 = solo rossi; 2 = contatti recenti; 3 = tutti;
-    public int tracementStrategy=0;  //0 = niente; 1 = blocca incontri giorno prima;
-    public int swabStrategy=0;   //0 = nessuno; 1 = incontri giorno prima; 2 = incontrati dai rossi per tutto l'historyMeetings (se attivo);
-    public boolean tracementStrategyComplete = false;  //ha bisogno di tot giorni per diventare true, dai quali in poi puoi abilitare i tracciamenti per tutto l'historyMeetings
-    public boolean vaccineStrategyComplete = false;
+    public static int quarantineStrategy=0;  //0 = nessuno; 1 = solo rossi; 2 = contatti recenti; 3 = tutti;
+    public static int tracementStrategy=0;  //0 = niente; 1 = blocca incontri giorno prima;
+    public static int swabStrategy=0;   //0 = nessuno; 1 = incontri giorno prima; 2 = incontrati dai rossi per tutto l'historyMeetings (se attivo);
+    public static boolean tracementStrategyComplete = false;  //ha bisogno di tot giorni per diventare true, dai quali in poi puoi abilitare i tracciamenti per tutto l'historyMeetings
+    public static boolean vaccineStrategyComplete = false;
 
     public boolean TracementResearch=false;
     private boolean isStartUpTracement=true; //riferito ai tracciamenti
