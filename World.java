@@ -6,16 +6,23 @@ import java.util.Scanner;
 public class World {
     Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
+    static int black=0;
+    static int blue=0;
+    static int green=-1;
+    static int yellow=1;
+    static int orange=0;
+    static int red=0;
+
+
     HashMap<Integer,Person> population = new HashMap<Integer,Person>();
-    int totalDeaths=0;
     //HashMap<Integer, Integer> region = new HashMap<Integer,Integer>();  //id regione, id persone dentro
     private Random randomSeed = new Random(); //Seed di randomizzazione
-    volatile int availableCredits;
+    static volatile int availableCredits;
     int testCost;
     int dailyMeetings;
     int dailyMeetingsOffset;
     int historyMeetings; //In days, giorni di memoria del tracer
-    int day = 0;
+    static int day = 0;
     int incubation;
     int duration;
     float r0;  //se < 1, endgame
@@ -40,8 +47,9 @@ public class World {
 
             for(int i = 1; i<=inputParameters.population; i++){
                 population.put(i,new Person(i,this));
+                green+=1;
             }
-
+            
         }
         //A INIZIO GIORNATA ABBIAMO GLI STATI DELLE PERSONE, A FINE GIORNATA GLI INCONTRI!
         public void nextDay(){
@@ -50,23 +58,48 @@ public class World {
             System.out.println("ecco i dati di ieri");
             System.out.println("r0 è "+ r0);
             System.out.println("i crediti a disposizione sono "+ availableCredits);
+            /*
+            QUA VANNO PRINTATI I DATI DEL GIORNO PRECEDENTE!!
+            */
 
+            blue=0;
+            green=0;
+            yellow=0;
+            orange=0;
+            red=0;
             ArrayList<Integer> deaths = new ArrayList<Integer>(); 
             //passiamo al giorno dopo
             for(Person individual : population.values()){
-                if(individual.infectionStatus==0){
-                    //quando qualcuno muore
-                    deaths.add(individual.myId);
-                    continue;
+                switch(individual.infectionStatus){
+                    case 0:
+                        //quando qualcuno muore
+                        deaths.add(individual.myId);
+                        continue;
+                    case 1:
+                        blue++;
+                    break;
+                    case 2:
+                        green++;
+                    break;
+                    case 3:
+                        System.out.println(individual.myId + " is yellow");
+                        if(individual.isVisible)
+                            orange++;
+                        else
+                            yellow++;
+                    break;
+                    case 4:
+                        System.out.println(individual.myId + " is red");
+                        red++;
+                    break;
                 }
-                currentStrategies.applyStrategies(individual);
                 individual.nextDay();
-                
+                currentStrategies.applyStrategies(individual);
             }
             for(Integer death : deaths){
                 System.out.println(death + " is ded");
                 population.remove(death);
-                totalDeaths++;
+                black++;
             }
             day++;
         }
@@ -92,6 +125,10 @@ public class World {
             ArrayList<Integer> peopleCanMeetId = new ArrayList<Integer>();
 
             for(int i = 1; i<population.size(); i++){
+                if(population.containsKey(i)){
+                    if(population.get(i).isQuarantined)
+                        continue;
+                }
                 peopleCanMeetId.add(i);
             }
             for (Person individual : population.values()){
@@ -101,7 +138,6 @@ public class World {
                 for(int i=0; i<individual.dailyMeetings;i++){
                     if(peopleCanMeetId.size()<=0){
                         vd=vd/population.size();
-                        System.out.println("stinky");
                         //nemmeno un incontro era libero
                         return;
                     }

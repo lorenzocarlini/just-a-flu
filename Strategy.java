@@ -26,7 +26,7 @@ public class Strategy {
         historyMeetingsResearch();
         //implementare con i threads!
         quarantine(currentPerson);
-        //tracement(currentPerson);
+        tracement(currentPerson);
         swab(currentPerson);
     }
 
@@ -52,12 +52,35 @@ public class Strategy {
     }
 
     public void tracement(Person currentPerson){
-        //STABILIAMO INSIEME I CRITERI!
-        //per adesso blocco solo persone giorno prima!
-        for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
-            myWorld.population.get(id).isQuarantined=true;
+        ///0 = nessuno; 1 = incontri giorno prima(dei rossi e identificati asinotmatici); 2 = per tutto l'historyMeetings (se attivo) dei rossi e identificati asinotmatici;
+        if(!currentPerson.hasBeenTested){
+            switch(tracementStrategy){
+                case 0:
+                    break;
+                case 1:
+                    if(currentPerson.isVisible || currentPerson.infectionStatus==4){
+                        for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
+                                myWorld.population.get(id).isQuarantined=true; 
+                            }
+                    }
+                    break;
+                case 2:
+                    if(tracementStrategyComplete){
+                        if(currentPerson.isVisible || currentPerson.infectionStatus==4){
+                            //CONTROLLARE SE IL PRIMO CICLO NON SFORA DI GIORNI!
+                            for(int i = 0; i < currentPerson.recentContacts.size(); i++){
+                                for(Integer id : currentPerson.recentContacts.get(i)){
+                                        myWorld.population.get(id).isQuarantined=true;
+                                    }
+                                }
+                        }
+                    }
+                break;
+            }
         }
-    }
+    }   
+    
+    
     
     public boolean vaccine(){
         //deve impiegare un tempo e costo proporzionale alla popolazione (o altri parametri), decidiamo più avanti in testing
@@ -79,11 +102,12 @@ public class Strategy {
     public boolean historyMeetingsResearch(){
         if(TracementResearch){
             if(isStartUpTracement){
-                TracementDay = myWorld.day + 30;
+                TracementDay = myWorld.day + 3;
                 isStartUpTracement=false;
             }
             if(TracementDay==myWorld.day){
                 tracementStrategyComplete=true;
+                System.out.println("i tracciamenti sono ora disponibili!");
             }
         }
         return tracementStrategyComplete;
@@ -92,34 +116,49 @@ public class Strategy {
 
     public void swab(Person currentPerson){
         ///0 = nessuno; 1 = incontri giorno prima(dei rossi e identificati asinotmatici); 2 = per tutto l'historyMeetings (se attivo) dei rossi e identificati asinotmatici;
-        switch(swabStrategy){
-            case 0:
-                break;
-            case 1:
-                if(currentPerson.isVisible || currentPerson.infectionStatus==4){
-                    for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
-                        if(myWorld.population.get(id).test())
-                            myWorld.swabTestCost();
-                            //adesso la persona dovrebbe essere identificata come malata asintomatica
-                            myWorld.population.get(id).isVisible=true;  //vedi te fra come gestire i visibili
-                    }
-                }
-                break;
-            case 2:
-                if(tracementStrategyComplete){
+        if(!currentPerson.hasBeenTested || currentPerson.testedToday){
+            switch(swabStrategy){
+                case 0:
+                    break;
+                case 1:
                     if(currentPerson.isVisible || currentPerson.infectionStatus==4){
-                        //CONTROLLARE SE IL PRIMO CICLO NON SFORA DI GIORNI!
-                        for(int i = 0; i < currentPerson.recentContacts.size(); i++){
-                            for(Integer id : currentPerson.recentContacts.get(i)){
-                                if(myWorld.population.get(id).test())
-                                    myWorld.swabTestCost();
+                        System.out.println("controllo gli incontri recenti di " + currentPerson.myId);
+                        for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
+                            if(myWorld.population.get(id).infectionStatus==3 ||myWorld.population.get(id).infectionStatus==2)
+                                myWorld.swabTestCost();
+                                if(myWorld.population.get(id).test()){
                                     //adesso la persona dovrebbe essere identificata come malata asintomatica
-                                    myWorld.population.get(id).isVisible=true;  //vedi te fra come gestire i visibili
+                                    System.out.println(id + " è risultato positivo al test!");
+                                    myWorld.population.get(id).testedToday=true;
+                                    myWorld.population.get(id).isQuarantined=true; 
+                                    myWorld.population.get(id).isVisible=true; 
+                                }
+                        }
+                    }
+                    break;
+                case 2:
+                    if(tracementStrategyComplete){
+                        if(currentPerson.isVisible || currentPerson.infectionStatus==4){
+                            System.out.println("controllo gli incontri recenti di " + currentPerson.myId);
+                            for(int i = 0; i < currentPerson.recentContacts.size(); i++){
+                                for(Integer id : currentPerson.recentContacts.get(i)){
+                                    if(myWorld.population.get(id).infectionStatus==3 ||myWorld.population.get(id).infectionStatus==2){
+                                        myWorld.swabTestCost();
+                                        if(myWorld.population.get(id).test()){
+                                            //adesso la persona dovrebbe essere identificata come malata asintomatica
+                                            System.out.println(id + " è risultato positivo al test!");
+                                            myWorld.population.get(id).testedToday=true;
+                                            myWorld.population.get(id).isQuarantined=true; 
+                                            myWorld.population.get(id).isVisible=true; 
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                }
-                break;
+                    break;
+            }
+            currentPerson.hasBeenTested=true;
         }
     }
 }

@@ -17,6 +17,8 @@ public class Person {
     public boolean isDeadly = false;
     public int dailyMeetings;
     public int dailyMeetingsDone;
+    public boolean hasBeenTested=false;
+    public boolean testedToday=false;
 
     public Person(int id, World parent){
         myWorld = parent;
@@ -28,6 +30,7 @@ public class Person {
         //calcola incontri che dovrà fare persona, controlla stato malattia se malato
         myDay++;
         calculateMeetings();
+        testedToday=false;
         if(isQuarantined){
             //se sta fermo, toglie crediti
             myWorld.removeCredit();
@@ -68,6 +71,7 @@ public class Person {
         //se sei stato infettato da verde
         if(infectionStatus == 2){
             dateInfectionStart = myDay + myWorld.duration/6;
+            System.out.println(myId+" è stato infettato");
             infectionPlanner();
         }
     }
@@ -75,7 +79,11 @@ public class Person {
         //quando prendi la malattia, come si svilupperà
         //dateIncubationStart = localDay;
         if (randomSeed.nextInt(99) <= myWorld.sintomaticity) {
-            dateSymptomsStart = myDay + randomSeed.nextInt((myWorld.duration - 1) / 3);
+            dateSymptomsStart = dateInfectionStart + randomSeed.nextInt((myWorld.duration - 1) / 3 - (dateInfectionStart - myDay) );
+            if(dateSymptomsStart < myDay + myWorld.duration/6){
+                dateSymptomsStart = myDay + 1 + myWorld.duration/6;
+
+            }
             if (randomSeed.nextInt(99) < myWorld.letality-1) {
                 isDeadly = true;
             }
@@ -99,17 +107,15 @@ public class Person {
             myWorld.population.get(id).addToRecentContacts(myId);
 
             if(willInfect()){
-                System.out.println(myId+" ha infettato " +id);
                 myWorld.population.get(id).infect();
             }
             if(myWorld.population.get(id).willInfect()){
                 infect();
             }
-            
+            System.out.println("incontro tra " + myId + " e " + id);
             this.dailyMeetingsDone+=1;
             myWorld.population.get(id).dailyMeetingsDone+=1;
             myWorld.vd+=2;
-            System.out.println(myId+" ha incontrato "+id);
             return true;
         }
         //se non lo incontra, vuol dire che è morto, oppure ha già fatto il suo numero di incontri
@@ -132,17 +138,21 @@ public class Person {
             dailyMeetings=0;
         else
             dailyMeetings = myWorld.dailyMeetings + (randomSeed.nextInt(myWorld.dailyMeetingsOffset + 1) -1);
+            if(dailyMeetings==0)
+                dailyMeetings=1;
         dailyMeetingsDone = 0;
 
     }
 
     public void addToRecentContacts(int id){
+        
         //aggiungo ai contatti recenti l'id di input
         if (recentContacts.size() == myWorld.historyMeetings){
             recentContacts.remove(0);
         }
         if (dailyMeetingsDone==0){
             recentContacts.add(new ArrayList<Integer>());
+            hasBeenTested=false;
         }
         recentContacts.get(recentContacts.size()-1).add(id);
 
