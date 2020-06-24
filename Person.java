@@ -14,11 +14,13 @@ public class Person {
     public int dateInfectionStart = -1;
     public int dateSymptomsStart = -1; //Data in cui inizieranno i sintomi (se inizieranno)
     public int dateInfectionEnd = -1;
+    public int quarantineTimer = -1;
     public boolean isDeadly = false;
+    public boolean hasBeenInfected=false;
     public int dailyMeetings;
     public int dailyMeetingsDone;
-    public boolean hasBeenTested=false;
-    public boolean testedToday=false;
+    public boolean hasBeenTested=false;  //controllo per vedere se hanno già testato i contatti che ha incontrato
+    public boolean testedToday=false;   //per vedere se è già stato testato oggi
 
     public Person(int id, World parent){
         myWorld = parent;
@@ -30,6 +32,13 @@ public class Person {
         //calcola incontri che dovrà fare persona, controlla stato malattia se malato
         myDay++;
         calculateMeetings();
+        if(quarantineTimer!=-1){
+            quarantineTimer--;
+            if(quarantineTimer==0){
+                isQuarantined=false;
+                quarantineTimer--;
+            }
+        }
         testedToday=false;
         if(isQuarantined){
             //se sta fermo, toglie crediti
@@ -69,9 +78,11 @@ public class Person {
     }
     void infect(){
         //se sei stato infettato da verde
-        if(infectionStatus == 2){
+        //ESSENDO CHE RIMANGONO VERDI, AGGIUNGO BOOLEANA PER NON RIPETERE L'INFEZIONE
+        if(infectionStatus == 2 && !hasBeenInfected){
             dateInfectionStart = myDay + myWorld.duration/6;
             System.out.println(myId+" è stato infettato");
+            hasBeenInfected=true;
             infectionPlanner();
         }
     }

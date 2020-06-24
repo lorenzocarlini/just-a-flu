@@ -12,6 +12,7 @@ public class World {
     static int yellow=1;
     static int orange=0;
     static int red=0;
+    static int quarantinedPeople=0;
 
 
     HashMap<Integer,Person> population = new HashMap<Integer,Person>();
@@ -67,9 +68,12 @@ public class World {
             yellow=0;
             orange=0;
             red=0;
+            quarantinedPeople=0;
             ArrayList<Integer> deaths = new ArrayList<Integer>(); 
             //passiamo al giorno dopo
             for(Person individual : population.values()){
+                if(individual.isQuarantined)
+                    quarantinedPeople++;
                 switch(individual.infectionStatus){
                     case 0:
                         //quando qualcuno muore
@@ -77,6 +81,8 @@ public class World {
                         continue;
                     case 1:
                         blue++;
+                        individual.isQuarantined = false;
+                        individual.quarantineTimer = -1;
                     break;
                     case 2:
                         green++;
