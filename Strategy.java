@@ -166,7 +166,7 @@ public class Strategy {
     public boolean historyMeetingsResearch(){
         if(TracementResearch){
             if(isStartUpTracement){
-                TracementDay = myWorld.day + 3; //InputVariabile invece di 3 //
+                //TracementDay = myWorld.day + 3; //InputVariabile invece di 3 //
                 isStartUpTracement=false;
             }
             if(TracementDay==myWorld.day){

@@ -30,6 +30,8 @@ public class Gui{
     public static ComboBox<String> comboBoxTracement = new ComboBox<String>().setReadOnly(false);
     public static ComboBox<String> comboBoxSwab = new ComboBox<String>().setReadOnly(false);
     private static World myWorld;
+    public static boolean createdGui;
+    public static boolean addedStrat;
     public static boolean triggerNewStrat;
     public static boolean isTracementComplete;
 
@@ -132,10 +134,16 @@ public class Gui{
                 stratPanel.addComponent(Gui.comboBoxTracement);
                 stratPanel.addComponent(Gui.comboBoxSwab);
 
+                myPanel.setLayoutManager(new GridLayout(3));
                 myPanel.addComponent(dataPanel.withBorder(Borders.singleLine("Dati")));
-                myPanel.addComponent(stratPanel.withBorder(Borders.singleLine("Strategie")));
+                //myPanel.addComponent(stratPanel.withBorder(Borders.singleLine("Strategie")));
+
+                myWindow.setComponent(myPanel.withBorder(Borders.singleLine("Simulazione")));
+                //
+                // gui.addWindow(myWindow);
 
                 GuiUtils.buildPanel(myWorld);
+
 
             }
         }).addTo(myPanel);
@@ -149,8 +157,10 @@ public class Gui{
 
         // Create gui and start gui
         MultiWindowTextGUI gui = new MultiWindowTextGUI(screen, new DefaultWindowManager(), new EmptySpace(TextColor.ANSI.BLUE));
-        gui.addWindowAndWait(Gui.myWindow);
-
+        if(!createdGui) {
+            gui.addWindowAndWait(Gui.myWindow);
+            createdGui = true;
+        }
 
         }
     }
@@ -178,7 +188,7 @@ public class Gui{
             inputWorld.currentStrategies.swabStrategy = Gui.comboBoxSwab.getSelectedIndex();
             if(inputWorld.currentStrategies.tracementStrategyComplete && !Gui.triggerNewStrat){
                 Gui.comboBoxTracement.addItem("Quarantena tutti incontri salvati di infetto");
-                Gui.triggerNewStrart = true;
+                Gui.triggerNewStrat = true;
             }
             inputWorld.nextDay();
             inputWorld.Meetings();
@@ -216,11 +226,15 @@ public class Gui{
             Gui.lblBlack.setText("Morti:" + Integer.toString(inputWorld.black));
             Gui.lblBlue.setText("Guariti:" + Integer.toString(inputWorld.blue));
             Gui.lblQuarantined.setText("Quarantenati: " + Integer.toString(inputWorld.quarantinedPeople));
+            if(inputWorld.red > 0 && !Gui.addedStrat)
+            {Gui.myPanel.addComponent(Gui.stratPanel.withBorder(Borders.singleLine("Strategie")));
+            Gui.addedStrat = true;
+            }
             if(inputWorld.currentStrategies.TracementDay <= -1 && !Gui.isTracementComplete ){
                 Gui.lblTracementStart = new Label("Giorno inizio tracciamento: ?");
                 Gui.isTracementComplete = true;
             }
-            else if(Gui.isTracementComplete){
+            else if(inputWorld.currentStrategies.TracementDay > -1 ){ //Gui.isTracementComplete
                 Gui.lblTracementStart = new Label("Giorno inizio tracciamento: " + Integer.toString(inputWorld.currentStrategies.TracementDay));
             }
 
