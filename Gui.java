@@ -214,26 +214,20 @@ public class Gui{
 
             if(inputWorld.availableCredits <= 0){
                 MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "Le risorse sono esaurite.");
-                Gui.myPanel.removeAllComponents();
-                Gui.myPanel.addComponent(Gui.dataPanel.withBorder(Borders.singleLine("Risultati")));
-                new Button("Termina", new Runnable() {
-                    @Override
-                    public void run() {
-                        Gui.myWindow.close();
-                    }
-                }).addTo(Gui.myPanel);
+                new Ending(inputWorld.startingPopulation,inputWorld.availableCredits,inputWorld.green,inputWorld.yellow+inputWorld.orange,inputWorld.blue,inputWorld.red,inputWorld.black,inputWorld.r0,inputWorld.day);
+                Gui.myWindow.close();
             }
 
             if(inputWorld.r0 < 1 && Gui.addedStrat){
-                MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "Malattia debellata.");
-                Gui.myPanel.removeAllComponents();
-                Gui.myPanel.addComponent(Gui.dataPanel.withBorder(Borders.singleLine("Risultati")));
-                new Button("Termina", new Runnable() {
-                    @Override
-                    public void run() {
-                        Gui.myWindow.close();
-                    }
-                }).addTo(Gui.myPanel);
+                MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "r0 < 1.");
+                new Ending(inputWorld.startingPopulation,inputWorld.availableCredits,inputWorld.green,inputWorld.yellow+inputWorld.orange,inputWorld.blue,inputWorld.red,inputWorld.black,inputWorld.r0,inputWorld.day);
+                Gui.myWindow.close();
+            }
+
+            if(inputWorld.infectionEnded){
+                MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "La malattia é stata debellata.");
+                new Ending(inputWorld.startingPopulation,inputWorld.availableCredits,inputWorld.green,inputWorld.yellow+inputWorld.orange,inputWorld.blue,inputWorld.red,inputWorld.black,inputWorld.r0,inputWorld.day);
+                Gui.myWindow.close();
             }
         }
 

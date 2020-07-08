@@ -112,7 +112,7 @@ public class Strategy {
                                 myWorld.swabTestCost();
                                 if(myWorld.population.get(id).test()){
                                     //adesso la persona dovrebbe essere identificata come malata asintomatica
-                                    System.out.println(id + " è risultato positivo al test!");
+                                    //System.out.println(id + " è risultato positivo al test!");
                                     myWorld.population.get(id).testedToday=true;
                                     myWorld.population.get(id).isQuarantined=true; 
                                     myWorld.population.get(id).isVisible=true; 

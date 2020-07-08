@@ -18,18 +18,21 @@ public class World {
     HashMap<Integer,Person> population = new HashMap<Integer,Person>();
     //HashMap<Integer, Integer> region = new HashMap<Integer,Integer>();  //id regione, id persone dentro
     private Random randomSeed = new Random(); //Seed di randomizzazione
+    public static int startingPopulation;
     static volatile int availableCredits;
     int testCost;
     int dailyMeetings;
     int dailyMeetingsOffset;
     int historyMeetings; //In days, giorni di memoria del tracer
-    static int day = 0;
+    public static int day = 0;
     int incubation;
     int duration;
     float r0;  //se < 1, endgame
     int infectivity; //da 1 a 100
     int sintomaticity;
     int letality;
+    static int daysNoDetection = 0;
+    public static boolean infectionEnded;
     float vd; //incontri medi
     Strategy currentStrategies = new Strategy(this);
 
@@ -45,6 +48,7 @@ public class World {
             this.dailyMeetings = inputParameters.dailyMeetings;
             this.historyMeetings = inputParameters.historyMeetings;
             this.dailyMeetingsOffset = getMeetingsOffset();
+            this.startingPopulation = inputParameters.population;
 
             for(int i = 1; i<=inputParameters.population; i++){
                 population.put(i,new Person(i,this));
@@ -54,7 +58,18 @@ public class World {
         }
         //A INIZIO GIORNATA ABBIAMO GLI STATI DELLE PERSONE, A FINE GIORNATA GLI INCONTRI!
         public void nextDay(){
-            r0 = vd * duration * infectivity;
+            r0 = Math.round(vd * duration * infectivity);
+            r0 = r0/100;
+            if(red == 0 && yellow == 0 && orange == 0){
+                daysNoDetection++;
+                if(daysNoDetection >= 2+duration/6){
+                    infectionEnded = true;
+                }
+            }
+            else {
+                daysNoDetection = 0;
+            }
+
 
             //System.out.println("ecco i dati di ieri");
             //System.out.println("r0 è "+ r0);
