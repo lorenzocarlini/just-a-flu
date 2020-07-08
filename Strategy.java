@@ -72,7 +72,8 @@ public class Strategy {
                 case 1:
                     if(currentPerson.isVisible || currentPerson.infectionStatus==4){
                         for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
-                            if(myWorld.population.get(id).quarantineTimer != -1 || myWorld.population.get(id).infectionStatus==1){
+                            if(myWorld.population.get(id).quarantineTimer == -1 && myWorld.population.get(id).infectionStatus>1){
+                                System.out.println(id+ " è stato messo in quarantena");
                                myWorld.population.get(id).isQuarantined=true;
                                myWorld.population.get(id).quarantineTimer = myWorld.duration;
                             }
@@ -85,7 +86,7 @@ public class Strategy {
                             //CONTROLLARE SE IL PRIMO CICLO NON SFORA DI GIORNI!
                             for(int i = 0; i < currentPerson.recentContacts.size(); i++){
                                 for(Integer id : currentPerson.recentContacts.get(i)){
-                                    if(myWorld.population.get(id).quarantineTimer != -1 || myWorld.population.get(id).infectionStatus==1){
+                                    if(myWorld.population.get(id).quarantineTimer == -1 && myWorld.population.get(id).infectionStatus>1){
                                         myWorld.population.get(id).isQuarantined=true;
                                         myWorld.population.get(id).quarantineTimer = myWorld.duration;
                                     }
