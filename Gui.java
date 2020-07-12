@@ -86,7 +86,7 @@ public class Gui{
         Gui.comboBoxSwab.setPreferredSize(new TerminalSize(55, 1));
         Gui.comboBoxSwab.addItem("Non testare nessuno");
         Gui.comboBoxSwab.addItem("Tampona incontri giorno precedente di infetto");
-        Gui.comboBoxSwab.addItem("Tampona tutti incontri salvati di infetto");
+
 
 
 
@@ -202,6 +202,7 @@ public class Gui{
             inputWorld.currentStrategies.tracementStrategy = Gui.comboBoxTracement.getSelectedIndex();
             inputWorld.currentStrategies.swabStrategy = Gui.comboBoxSwab.getSelectedIndex();
             if(inputWorld.currentStrategies.tracementStrategyComplete && !Gui.triggerNewStrat){
+                Gui.comboBoxSwab.addItem("Tampona tutti incontri salvati di infetto");
                 Gui.comboBoxTracement.addItem("Quarantena tutti incontri salvati di infetto");
                 Gui.triggerNewStrat = true;
                 if(Gui.addedStrat){
@@ -218,13 +219,7 @@ public class Gui{
                 Gui.myWindow.close();
             }
 
-            if(inputWorld.r0 < 1 && Gui.addedStrat){
-                MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "r0 < 1.");
-                new Ending(inputWorld.startingPopulation,inputWorld.availableCredits,inputWorld.green,inputWorld.yellow+inputWorld.orange,inputWorld.blue,inputWorld.red,inputWorld.black,inputWorld.r0,inputWorld.day);
-                Gui.myWindow.close();
-            }
-
-            if(inputWorld.infectionEnded){
+            else if(inputWorld.infectionEnded){
                 MessageDialog.showMessageDialog(Gui.textGUI, "Simulazione terminata", "La malattia é stata debellata.");
                 new Ending(inputWorld.startingPopulation,inputWorld.availableCredits,inputWorld.green,inputWorld.yellow+inputWorld.orange,inputWorld.blue,inputWorld.red,inputWorld.black,inputWorld.r0,inputWorld.day);
                 Gui.myWindow.close();
