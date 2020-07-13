@@ -1,0 +1,65 @@
+Popolazione massima sicura: 30k
+Risorse: 600k
+Infett: 70
+Sintomaticitá: 45
+Mortalitá: 14
+Durata: 30
+Incontri: 7
+Cron: 7
+Costo: 2
+Tempo sviluppo: 50
+
+
+NO STRATEGIE
+Primo rosso 6
+
+Giorno 10 > 1 rosso
+Giorno 15 > 23 rossi 3 asintomaticinr, 2 morti, guariti 0
+Giorno 20 > 346 rossi 79 asintomaticinr, 26 morti, guariti 0
+Giorno 25 > 4317 rossi 1010 asintomaticinr, 119 morti, guariti 0
+Giorno 30 > 22190 rossi 2929 asintomaticinr, 228 morti, guariti 1
+Giorno 31 > Risorse esaurite, 25340 rossi, 2314 asintomaticinr, morti 234, guariti 1
+
+
+
+QUARANTENA ROSSI
+Primo rosso 6
+
+Giorno 10 > 1 rosso
+Giorno 15 > 11 rossi, 0 morti
+Giorno 20 > 70 rossi, 0 morti, asintomanticinr 6
+Giorno 25 > 249 rossi, 3 morti, 28 asintomaticinr
+Giorno 30 > 892 rossi, 9 morti, asintomanticinr 121
+Giorno 35 > 2855 rossi, 24 morti, asintomanticinr 441, guariti 1
+Giorno 40 > 8792 rossi, 85 morti, asintomaticinr 1389, guariti 11
+Giorno 44 > Risorse esaurite, rossi 18124, 234 morti, asintomaticinr 2058, guariti 70
+
+
+
+QUARANTENA ROSSI + TAMPONI NOAPP
+Primo rosso 7
+
+Giorno 10 > 1 rosso
+Giorno 15 > 18 rossi, 0 morti, asintomaticinr 2, quarantena 18
+Giorno 20 > 69 rossi, 0 morti, asintomanticinr 9, quarantena 69
+Giorno 25 > 273 rossi, 2 morti, 41 asintomaticinr, asitnomaticir 2, quarantena 275
+Giorno 30 > 1027 rossi, 5 morti, asintomanticinr 148, asintomaticir 13, quarantena 1040
+Giorno 35 > 3450 rossi, 30 morti, asintomanticinr 349, asintomatici 181, guariti 1, quarantena 3632
+Giorno 40 > 10129 rossi, 101 morti, asintomaticinr 406, asintomatici 942, guariti 19, quarantena 11083
+Giorno 41 > Risorse esaurite, rossi 12003, 126 morti, asintomatici 1439, guariti 28
+
+
+QUARANTENA ROSSI + TAMPONI APP + QUARANTENA PRECED NOAPP
+Primo rosso 6
+
+Giorno 10 > 1 rosso, quarantenati 26
+Giorno 15 > 10 rossi, quarantena 24
+Giorno 20 > 28 rossi, quarantena 73
+Giorno 25 > 68 rossi, quarantena 160, asintomaticinr 2
+Giorno 30 > 187 rossi, 1 morti, quarantena 531, asintomatici 12
+Giorno 35 > 661 rossi, 2 morti, asintomanticinr 41, asintomatici 19, guariti 1, quarantena 1654
+Giorno 40 > 2085 rossi, 17 morti, asintomaticinr 96, asintomatici 148, guariti 10, quarantena 4096
+Giorno 43 > Risorse esaurite, rossi 4143, 40 morti, asintomatici 618, guariti 22
+
+
+
