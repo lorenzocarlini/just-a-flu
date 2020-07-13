@@ -85,11 +85,16 @@ public class Strategy {
                         if(currentPerson.isVisible || currentPerson.infectionStatus==4){
                             //CONTROLLARE SE IL PRIMO CICLO NON SFORA DI GIORNI!
                             for(int i = 0; i < currentPerson.recentContacts.size(); i++){
-                                for(Integer id : currentPerson.recentContacts.get(i)){
-                                    if(myWorld.population.get(id).quarantineTimer == -1 && myWorld.population.get(id).infectionStatus>1){
-                                        myWorld.population.get(id).isQuarantined=true;
-                                        myWorld.population.get(id).quarantineTimer = myWorld.duration;
+                                try {
+                                    for (Integer id : currentPerson.recentContacts.get(i)) {
+                                        if (myWorld.population.get(id).quarantineTimer == -1 && myWorld.population.get(id).infectionStatus > 1) {
+                                            myWorld.population.get(id).isQuarantined = true;
+                                            myWorld.population.get(id).quarantineTimer = myWorld.duration;
+                                        }
                                     }
+                                }
+                                catch(NullPointerException e){
+                                    continue;
                                 }
                             }
                         }
@@ -108,18 +113,28 @@ public class Strategy {
                 case 1:
                     if(currentPerson.isVisible || currentPerson.infectionStatus==4){
                         //System.out.println("controllo gli incontri recenti di " + currentPerson.myId);
-                        for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)){
-                            if(myWorld.population.get(id).infectionStatus==3 ||myWorld.population.get(id).infectionStatus==2)
-                                myWorld.swabTestCost();
-                                if(myWorld.population.get(id).test()){
-                                    //adesso la persona dovrebbe essere identificata come malata asintomatica
-                                    //System.out.println(id + " è risultato positivo al test!");
-                                    myWorld.population.get(id).testedToday=true;
-                                    myWorld.population.get(id).isQuarantined=true; 
-                                    myWorld.population.get(id).isVisible=true; 
+                        for(Integer id : currentPerson.recentContacts.get(currentPerson.recentContacts.size()-1)) {
+                            try {
+                                if (myWorld.population.get(id).infectionStatus == 3 || myWorld.population.get(id).infectionStatus == 2) {
+
+                                    myWorld.swabTestCost();
+                                    if (myWorld.population.get(id).test()) {
+                                        //adesso la persona dovrebbe essere identificata come malata asintomatica
+                                        //System.out.println(id + " è risultato positivo al test!");
+                                        myWorld.population.get(id).testedToday = true;
+                                        myWorld.population.get(id).isQuarantined = true;
+                                        myWorld.population.get(id).isVisible = true;
+                                    }
                                 }
+                            }
+                            catch(NullPointerException e){
+                                continue;}
+
                         }
-                    }
+
+
+                        }
+
                     break;
                 case 2:
                     if(tracementStrategyComplete){
@@ -127,15 +142,20 @@ public class Strategy {
                             //System.out.println("controllo gli incontri recenti di " + currentPerson.myId);
                             for(int i = 0; i < currentPerson.recentContacts.size(); i++){
                                 for(Integer id : currentPerson.recentContacts.get(i)){
-                                    if(myWorld.population.get(id).infectionStatus==3 ||myWorld.population.get(id).infectionStatus==2){
-                                        myWorld.swabTestCost();
-                                        if(myWorld.population.get(id).test()){
-                                            //adesso la persona dovrebbe essere identificata come malata asintomatica
-                                            //System.out.println(id + " è risultato positivo al test!");
-                                            myWorld.population.get(id).testedToday=true;
-                                            myWorld.population.get(id).isQuarantined=true; 
-                                            myWorld.population.get(id).isVisible=true; 
+                                    try {
+                                        if (myWorld.population.get(id).infectionStatus == 3 || myWorld.population.get(id).infectionStatus == 2) {
+                                            myWorld.swabTestCost();
+                                            if (myWorld.population.get(id).test()) {
+                                                //adesso la persona dovrebbe essere identificata come malata asintomatica
+                                                //System.out.println(id + " è risultato positivo al test!");
+                                                myWorld.population.get(id).testedToday = true;
+                                                myWorld.population.get(id).isQuarantined = true;
+                                                myWorld.population.get(id).isVisible = true;
+                                            }
                                         }
+                                    }
+                                    catch (NullPointerException e){
+                                        continue;
                                     }
                                 }
                             }
